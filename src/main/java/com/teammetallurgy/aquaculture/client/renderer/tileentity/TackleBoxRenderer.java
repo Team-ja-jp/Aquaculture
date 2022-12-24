@@ -2,10 +2,10 @@ package com.teammetallurgy.aquaculture.client.renderer.tileentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import com.teammetallurgy.aquaculture.Aquaculture;
 import com.teammetallurgy.aquaculture.block.TackleBoxBlock;
-import com.teammetallurgy.aquaculture.block.tileentity.TackleBoxTileEntity;
+import com.teammetallurgy.aquaculture.block.blockentity.TackleBoxBlockEntity;
 import com.teammetallurgy.aquaculture.client.ClientHandler;
 import com.teammetallurgy.aquaculture.init.AquaBlocks;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
@@ -30,7 +30,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.Nonnull;
 
-public class TackleBoxRenderer <T extends TackleBoxTileEntity> implements BlockEntityRenderer<T> {
+public class TackleBoxRenderer <T extends TackleBoxBlockEntity> implements BlockEntityRenderer<T> {
     private static final ResourceLocation TACKLE_BOX_TEXTURE = new ResourceLocation(Aquaculture.MOD_ID, "textures/entity/tileentity/tackle_box.png");
     private static final RenderType TACKLE_BOX_RENDER = RenderType.entityCutout(TACKLE_BOX_TEXTURE);
     private final ModelPart base;
@@ -62,10 +62,10 @@ public class TackleBoxRenderer <T extends TackleBoxTileEntity> implements BlockE
             matrixStack.pushPose();
             matrixStack.translate(0.5D, 0.5D, 0.5D);
             float facing = state.getValue(TackleBoxBlock.FACING).toYRot();
-            matrixStack.mulPose(Vector3f.YP.rotationDegrees(-facing));
+            matrixStack.mulPose(Axis.YP.rotationDegrees(-facing));
             matrixStack.translate(-0.5D, -0.5D, -0.5D);
             matrixStack.translate(0.0625F, 1.125F, 0.5F); //Translate
-            matrixStack.mulPose(Vector3f.XN.rotationDegrees(-180)); //Flip
+            matrixStack.mulPose(Axis.XN.rotationDegrees(-180)); //Flip
 
             DoubleBlockCombiner.NeighborCombineResult<?> callbackWrapper = DoubleBlockCombiner.Combiner::acceptNone;
             float angle = tackleBox.getOpenNess(partialTicks);
