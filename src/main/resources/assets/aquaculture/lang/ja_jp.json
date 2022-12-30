@@ -188,8 +188,7 @@
   "entity.aquaculture.dark_oak_fish_mount": "ダークオークの魚額縁",
   "entity.aquaculture.water_arrow": "矢",
 
-  "_comment": "Message in a bottle",
-  "aquaculture.message": "エラー！ 魚が脱出！",
+  "_comment": "Message In A Bottle",
   "aquaculture.message1": "魚を探すにはどうすればいいですか？",
   "aquaculture.message2": "医者は自分の気持ちを詰め込むべきだと言った。",
   "aquaculture.message3": "ボトル製造工場のメッセージに閉じ込められている私を助けてください！",
@@ -245,7 +244,7 @@
   "aquaculture.neptunium_pickaxe.tooltip.desc" : "水中でも採掘速度が変わりません",
   "aquaculture.neptunium_axe.tooltip.title" : "ネプチューンの偉力",
   "aquaculture.neptunium_axe.tooltip.desc" : "水中の敵に対するダメージが増加します",
-  "aquaculture.neptunium_hoe.tooltip.title" : "ネプチューンの賜物",
+  "aquaculture.neptunium_hoe.tooltip.title" : "ネプチューンの恩恵",
   "aquaculture.neptunium_hoe.tooltip.desc" : "耕地が湿ったままになります",
   "aquaculture.neptunium_shovel.tooltip.title" : "ネプチューンの恩寵",
   "aquaculture.neptunium_shovel.tooltip.desc" : "水中でも採掘速度が変わりません",
